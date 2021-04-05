@@ -1,7 +1,7 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+pub struct Matrix<T, const R: usize, const C: usize> {
+    inner: [[T; R]; C]
 }
+
+pub type RVec<T, const N: usize> = Matrix<T, 1, N>;
+
+pub type CVec<T, const N: usize> = Matrix<T, N, 1>;
